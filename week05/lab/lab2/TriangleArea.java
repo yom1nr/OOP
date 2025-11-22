@@ -13,14 +13,14 @@ public class TriangleArea {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         TriangleArea triangleArea = new TriangleArea();
 
         System.out.print("Enter the base of the triangle: ");
-        double base = scanner.nextDouble();
+        double base = sc.nextDouble();
 
         System.out.print("Enter the height of the triangle: ");
-        double height = scanner.nextDouble();
+        double height = sc.nextDouble();
 
         triangleArea.displayArea(base, height);
         sc.close();
