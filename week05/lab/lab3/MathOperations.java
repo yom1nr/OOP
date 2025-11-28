@@ -34,10 +34,10 @@ public class MathOperations {
         System.out.print("Enter second number: ");
         int num2 = scanner.nextInt();
 
-        System.out.printf("Sum: %d%n", mathOps.add(num1, num2));
-        System.out.printf("Difference: %d%n", mathOps.subtract(num1, num2));
-        System.out.printf("Product: %d%n", mathOps.multiply(num1, num2));
-        System.out.printf("Quotient: %.1f%n", mathOps.divide(num1, num2));
+        System.out.println("Sum: " + mathOps.add(num1, num2));
+        System.out.println("Difference: " + mathOps.subtract(num1, num2));
+        System.out.println("Product: " + mathOps.multiply(num1, num2));
+        System.out.println("Quotient: " + mathOps.divide(num1, num2));
 
         scanner.close();
     }
