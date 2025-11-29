@@ -1,0 +1,23 @@
+package week06.lecture.ex2;
+
+public class Student {
+    private String name;
+    private int age;
+
+    public Student() {
+    }
+
+    public Student(String name) {
+        this.name = name;
+    }
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void displayAllDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("age: " + age);
+    }
+}
