@@ -4,34 +4,41 @@ import java.util.*;
 
 public class NumberProcessor {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Array size: ");
-        int s = sc.nextInt();
+        int size = scanner.nextInt();
 
-        System.out.println("Please enter " + s + " numbers:");
-        int n[] = new int[s];
+        int[] numbers = new int[size];
 
-        for (int i = 0; i < n.length; i++) {
+        System.out.println("Please enter " + size + " numbers:");
+        for (int i = 0; i < size; i++) {
             System.out.print("Number " + (i + 1) + ": ");
-            n[i] = sc.nextInt();
+            numbers[i] = scanner.nextInt();
         }
 
-        System.out.println("Array data = " + Arrays.toString(n));
+        System.out.println("Array data = " + Arrays.toString(numbers));
 
-        int sum = 0;
-        int max = n[0];
-        int min = n[0];
-        for (int j : n) {
-            if (j > max) {
-                max = j;
+        int minus = 0;
+        int max = Integer.MAX_VALUE;
+        boolean isFirst = true;
+
+        for (int num : numbers) {
+            if (isFirst) {
+                max = num;
+                minus = num;
+                isFirst = false;
             } else {
-                min = j;
+                minus -= num;
+                if (num > max) {
+                    max = num;
+                }
             }
         }
 
-        sum = min - max;
-        System.out.println("minus = " + sum);
+        System.out.println("minus = " + minus);
         System.out.println("max = " + max);
+
+        scanner.close();
     }
 }

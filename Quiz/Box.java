@@ -5,13 +5,23 @@ import java.util.Scanner;
 public class Box {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n;
+        boolean shouldContinue = true;
+        while (shouldContinue) {
+            System.out.print("Enter length: ");
+            double length = sc.nextDouble();
+            System.out.print("Enter width: ");
+            double width = sc.nextDouble();
+            System.out.print("Enter height: ");
+            double height = sc.nextDouble();
 
-        System.out.print("Enter number: ");
-        n = sc.nextInt();
+            double volume = length * width * height;
+            System.out.printf("Volume of the box is: %.2f\n", volume);
 
-        for (int i = 0; i < 11; i++) {
-            for (int j =  ; j <= )            
+            System.out.print("Do you want to calculate another box volume? (true/false): ");
+            shouldContinue = sc.nextBoolean();
         }
+        sc.close();
+
+        System.out.println(shouldContinue);
     }
 }
