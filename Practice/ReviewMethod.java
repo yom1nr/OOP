@@ -20,7 +20,7 @@ public class ReviewMethod {
         double base = sc.nextDouble();
         System.out.print("Enter height: ");
         double height = sc.nextDouble();
-
+        
         triangle.displayArea(base, height);
         sc.close();
 
