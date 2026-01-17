@@ -4,31 +4,31 @@ import java.util.Scanner;
 
 public class MainClass {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         try {
             System.out.print("Enter the number of employees: ");
-            int numberOfEmployees = scanner.nextInt();
-            scanner.nextLine();
+            int numEmployees = sc.nextInt();
+            sc.nextLine();
 
-            Employee[] employees = new Employee[numberOfEmployees];
+            Employee[] employees = new Employee[numEmployees];
 
-            for (int i = 0; i < numberOfEmployees; i++) {
+            for (int i = 0; i < numEmployees; i++) {
                 System.out.println("\nEntering data for employee " + (i + 1) + ":");
 
                 System.out.print("Enter name: ");
-                String name = scanner.nextLine();
+                String name = sc.nextLine();
 
                 System.out.print("Enter position: ");
-                String position = scanner.nextLine();
+                String position = sc.nextLine();
 
                 System.out.print("Is this employee a manager? (yes/no): ");
-                String isManager = scanner.nextLine();
+                String isManager = sc.nextLine();
 
-                if (isManager.equalsIgnoreCase("yes")) {
+                if (isManager.equals("yes")) {
                     System.out.print("Enter team size: ");
-                    int teamSize = scanner.nextInt();
-                    scanner.nextLine();
+                    int teamSize = sc.nextInt();
+                    sc.nextLine();
 
                     employees[i] = new Manager(name, position, teamSize);
                 } else {
@@ -37,7 +37,7 @@ public class MainClass {
             }
 
             System.out.println("\nAll Employee Information:");
-            if (numberOfEmployees == 0) {
+            if (numEmployees == 0) {
                 System.out.println("(No employees to display)");
             } else {
                 for (Employee emp : employees) {
@@ -50,6 +50,6 @@ public class MainClass {
         } catch (Exception e) {
             System.out.println("\nInvalid input. Please enter a valid number or decimal.");
         }
-        scanner.close();
+        sc.close();
     }
 }
