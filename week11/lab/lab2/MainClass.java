@@ -9,8 +9,7 @@ public class MainClass {
         String accountNumber = scanner.nextLine();
         System.out.print("Enter initial balance: ");
         double initialBalance = scanner.nextDouble();
-        BankAccount account = new BankAccount(accountNumber,
-                initialBalance);
+        BankAccount account = new BankAccount(accountNumber, initialBalance);
         while (true) {
             System.out.println("\nMenu:");
             System.out.println("1. Deposit");
@@ -19,6 +18,7 @@ public class MainClass {
             System.out.println("4. Exit");
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
+
             try {
                 switch (choice) {
                     case 1:
