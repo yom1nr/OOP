@@ -12,7 +12,7 @@ public class ReviewMethod {
         System.out.printf("Area of triangle is: %.2f", area);
     }
 
-    public static void main(String[] args) {
+    public static void main(Strings[] args) {
         Scanner sc = new Scanner(System.in);
         ReviewMethod triangle = new ReviewMethod();
 
@@ -20,7 +20,7 @@ public class ReviewMethod {
         double base = sc.nextDouble();
         System.out.print("Enter height: ");
         double height = sc.nextDouble();
-        
+
         triangle.displayArea(base, height);
         sc.close();
 

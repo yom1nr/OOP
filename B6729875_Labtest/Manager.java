@@ -14,7 +14,6 @@ public class Manager extends Employee {
 
     @Override
     public void displayInfo() {
-        // Matches the output format: "Name: Bob | Position: Team Lead | Team Size: 5"
         System.out.println("Name: " + getName() + " | Position: " + getPosition() + " | Team Size: " + teamSize);
     }
 }
